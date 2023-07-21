@@ -1,11 +1,16 @@
 /** @format */
 
-import React from 'react';
-import { Typography } from 'antd';
+import React from "react";
+import { Typography } from "antd";
+import { background } from "asset/images";
 
 const Home = () => {
   const { Title } = Typography;
-  return <Title>Home Page Nè</Title>;
+  return (
+    <div style={{ background: "white" }}>
+      <div>Home Page Nè</div>
+    </div>
+  );
 };
 
 export default Home;

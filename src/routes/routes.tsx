@@ -1,10 +1,10 @@
 /** @format */
 
-import { createBrowserRouter } from 'react-router-dom';
-import { ROUTES } from './data';
-import { MainPage, Login, Home } from 'pages';
+import { createBrowserRouter } from "react-router-dom";
+import { ROUTES } from "./data";
+import { MainPage, Login, Home, MyProperty } from "pages";
 
-import ResolveRoute from '../routes/ResolveRoute';
+import ResolveRoute from "../routes/ResolveRoute";
 
 export const routes = createBrowserRouter([
   {
@@ -18,6 +18,10 @@ export const routes = createBrowserRouter([
           {
             path: ROUTES.HOME,
             Component: Home,
+          },
+          {
+            path: ROUTES.MY_PROPERTY,
+            Component: MyProperty,
           },
         ],
       },

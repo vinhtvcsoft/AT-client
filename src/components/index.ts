@@ -1,7 +1,6 @@
-import SiderBar from './SideBar/SiderBar';
-import {InputCus} from './Input';
+import SiderBar from "./SideBar/SiderBar";
+import HeaderBar from "./HeaderBar/HeaderBar";
+import { InputCus } from "./Input";
+import IConButton from "./Button/IconButton";
 
-export {
-    SiderBar,
-    InputCus,
-}
+export { SiderBar, HeaderBar, InputCus, IConButton };

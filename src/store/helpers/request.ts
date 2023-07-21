@@ -27,10 +27,11 @@ function* request({
       if (!response) {
         // TODO: Handle server communication error
       } else {
-        const { status, data } = response;
-        if ([200, 201].includes(status)) {
-          // If request call is successful
-          const normalizedData = normalizer ? normalizer(data) : data;
+        const data = response;
+        if (data?.result) {
+          const normalizedData = normalizer
+            ? normalizer(data.result)
+            : data.result;
           yield call(requestSuccess, {
             data: normalizedData,
             // redirect,
@@ -40,6 +41,11 @@ function* request({
             successAction,
           });
         }
+
+        // if ([200, 201].includes(status)) {
+        //   // If request call is successful
+
+        // }
       }
     }
   } catch (error: any) {
